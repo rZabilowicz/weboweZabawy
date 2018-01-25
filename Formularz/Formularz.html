@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Formularz</title>
+ <meta charset="UTF-8">
+ <style type="text/css">
+ body{
+ width:1000px;
+	font-size:25px;
+	font-family:sans-serif;}
+#dane{
+	width:40%;}
+input[type="text"]{height:30px;
+	width:65%;
+	border:none;
+	margin-top:5px;
+	margin-bottom:5px;}
+#adres select{height:30px;
+	width:65%;
+	border:1px solid white;}
+#plec{border:1px solid grey;
+	width:85%;
+	margin:0px;}
+#plec label{width:42%;}
+input[type=radio]{
+	width:15px;
+	margin-left:20px;
+	background:grey;
+	border:1px solid #9E9E9E;}
+#adres{
+	width:40%;}
+#numer{
+	width: 70px;}
+#nrlok{
+	display:iline-block;
+	width:27%;}
+#zmniejsz{width:7.5%;}
+
+#hobby{width:90%;}
+
+
+h1{margin-left:20px;}
+
+fieldset{float:left;
+	background-color:#E6E6E6;
+	border:none;
+	margin:15px;}
+legend{
+	padding:10px 20px 10px 20px;
+	background-color:#ADEAEA;}
+clear{
+	clear:both;}
+label{ display:inline-block;
+	width:30%;}	
+#submit{
+background-color:white;}
+#hobby label{
+width:23%;}
+
+input[type=submit] {
+    padding:10px 25px 10px 25px; 
+    background:orange; 
+    border:4px solid #FF3300;
+    cursor:pointer;
+	color:white;
+	font-size:25px;
+	}
+	
+input[type=checkbox]+label{
+	display:inline-block;
+	margin:5px;
+	}
+input[type=radio]+label{
+	display:inline-block;
+	margin-left:15px;
+	}
+	
+input[type=checkbox],input[type=radio]{
+	display:none;
+	
+	}
+#hobby label{
+	margin-top:10px;
+	}
+input[type=checkbox]+label:before{
+	content:"";
+	font-size:12px;
+	border:1px solid gray;
+	border-radius:3px;
+	display:inline-block;
+	width:10px;
+	height:12px;
+	line-height:12px;
+	margin: -2px 6px 0 0;
+	vertical-align:middle;
+	background-color:#D5D5D5;
+	
+}
+input[type=checkbox]:checked+label:before{
+content:"\2714";
+font-weight: bold;
+color:#666666;}
+
+input[type=radio]+label:before{
+	content:"";
+	display:inline-block;
+	width:8px;
+	height:8px;
+	line-height: 8px; 
+	font-size: 15px;  
+    text-align: center;
+	border:1px solid gray;
+	border-radius:16px;
+	margin-right:5px;
+	vertical-align:middle;
+	color:transparent;
+	color:#D5D5D5;
+	background-color:#D5D5D5;
+	font-weight: 900;}
+	
+input[type=radio]:checked+label:before{
+	content:"\2022";
+	font-weight: bold;
+	color:#666666;}
+
+
+
+</style>
+ </head>
+ <body>
+	 <form>
+		<h1>Formularz tekstowy</h1>
+		<fieldset id="dane">
+			<legend>Dane podstawowe</legend>
+			<label for="imie">Imie:</label>
+			<input type="text" id="imie" name="imie" ><br>
+			<label for="nazwisko">Nazwisko:</label>
+			<input type="text" id="nazwisko" name="nazwisko" ><br>
+			<label for="wiek">Wiek:</label>
+			<input type="text" id="wiek" name="wiek" ><br><br>
+			<fieldset id="plec">
+				<legend>Płeć</legend>
+				<input type="radio" id="kobieta" name="plec" value="k">
+				<label for="kobieta">Kobieta</label>
+				<input type="radio" id="mezczyzna" name="plec" value="m">
+				<label for="mezczyzna">Mężczyzna</label>
+			</fieldset>
+		</fieldset>
+		<fieldset id="adres">
+			<legend>Adres</legend>
+			<label for="ulica">Ulica:</label>
+			<input type="text" id="ulica" name="ulica" ><br>
+			<label  for="nrDomu">Nr domu:</label>
+			<input  id="zmniejsz nrDomu" type="text" name="nrDomu" >
+			<label id= "nrlok" for="nrLokalu">Nr lokalu:</label>
+			<input id="nrlok nrLokalu" type="text" name="nrLokalu" ><br>
+			<label for="kod">Kod:</label>
+			<input type="text" id="kod" name="kod" ><br>
+			<label for="miasto">Miasto:</label>
+			<input type="text" id="miasto" name="miasto" ><br>
+			<label for="wojewodztwo">Wojew:</label>
+			<select  id="wojewodztwo" name="wojewodztwo">
+				<option value="1">zachodniopomorskie</option>
+				<option value="2">dolnośląskie</option>
+				<option value="3">kujawsko-pomorskie</option>
+				<option value="4">lubelskie</option>
+				<option value="5">lubuskie</option>
+				<option value="6">łódzkie</option>
+				<option value="7">małopolskie</option>
+				<option value="8">mazowieckie</option>
+				<option value="9">opolskie</option>
+				<option value="10">podkarpackie</option>
+				<option value="11">podlaskie</option>
+				<option value="12">pomorskie</option>
+				<option value="13">śląskie</option>
+				<option value="14">świętokrzyskie</option>
+				<option value="15">warmińsko-mazurskie</option>
+				<option value="16">wielkopolskie</option>
+	
+			</select>
+			<br>
+			<br>
+		</fieldset>
+		
+		<br><br>
+		<fieldset id="hobby">
+			<legend>Hobby</legend>
+			<input type="checkbox" id="hobby1" name="hobby1" value="1">
+			<label for="hobby1">Rower</label>
+			<input type="checkbox" id="hobby2" name="hobby2" value="2">
+			<label for="hobby2">Rolki</label>
+			<input type="checkbox" id="hobby3" name="hobby3" value="3">
+			<label for="hobby3">Seriale</label>
+			<input type="checkbox" id="hobby4" name="hobby4" value="4">
+			<label for="hobby4">Batoniki</label>
+			<input type="checkbox" id="hobby5" name="hobby5" value="5">
+			<label for="hobby5">Blogi modowe</label>
+			<input type="checkbox" id="hobby6" name="hobby6" value="6">
+			<label for="hobby6">Trudne sprawy</label>
+			<input type="checkbox" id="hobby7" name="hobby7" value="7">
+			<label for="hobby7">Dziewczyny</label>
+			<input type="checkbox" id="hobby8" name="hobby8" value="8">
+			<label for="hobby8">Chłopaki</label>
+			
+		</fieldset>
+		
+		<fieldset id="submit">
+			<input type="submit" value="Wyślij">
+		</fieldset>
+	</form>
+ </body>
+</html>
